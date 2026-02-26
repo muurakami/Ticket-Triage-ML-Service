@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Ruff cache
+.ruff_cache/
+
+# mypy cache
+.mypy_cache/
+
+# pytest cache
+.pytest_cache/
+
+# ML artifacts (модели хранить в S3/DVC, не в git)
+artifacts/
+*.joblib
+*.pkl
+*.h5
+*.onnx
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.idea/
+.vscode/
+*.swp
