@@ -1,0 +1,36 @@
+[project]
+name = "ticket-triage-ml-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.133.1",
+    "joblib>=1.5.3",
+    "pydantic>=2.12.5",
+    "scikit-learn>=1.8.0",
+    "uvicorn>=0.41.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "ruff>=0.15.3",
+]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+ignore_missing_imports = true # Полезно для ML-библиотек без тайпингов
+disallow_untyped_defs = true
+
+[tool.ruff.lint]
+# E, F - базовые ошибки. I - сортировка импортов. 
+# UP - авто-обновление старого синтаксиса до Python 3.13
+# B - поиск багов (bugbear), SIM - упрощение кода (simplify)
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
